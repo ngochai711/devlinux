@@ -122,7 +122,7 @@ for student, github in data.get('students', {}).items():
 ")
     echo ""
 
-done < <(find "$REPO_ROOT" -name "class.json" -not -path "*/.git/*" | sort)
+done < <(find "$REPO_ROOT" -mindepth 3 -name "class.json" -not -path "*/.git/*" | sort)
 
 echo "======================================"
 echo "  ✅ Tạo mới : $CREATED thư mục"
